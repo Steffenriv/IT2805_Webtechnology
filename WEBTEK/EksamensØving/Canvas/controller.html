@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tax forms: Bar chart with lines</title>
+    <meta charset="UTF-8">
+    <script src="taxForms.js"></script>
+  </head>
+  <body>
+    <canvas id="chart" width="400" height="120"></canvas>
+
+    <script>
+      const canvas = document.getElementById('chart');
+      const context = canvas.getContext('2d');
+
+      /* Draw a line from (fromX, fromY) to (toX, toY) */
+      function drawLine(fromX, fromY, toX, toY) {
+        context.beginPath();
+        context.moveTo(toX, toY);
+        context.lineTo(fromX, fromY);
+        context.stroke();
+      }
+
+      /* Creates ARC with the given inputs, easier to use*/
+      function drawCircle(x, y, r, sA, eA,aC) {
+        context.beginPath();
+        context.arc(x, y, r, sA * Math.PI, Math.PI * eA, aC);  //X, Y, R, vinkel 1, vinkel 2, if true = reverse.
+        context.stroke();
+      }
+      
+      function drawButton(x, y, direction) {
+        if(direction == "right")  {
+          drawLine(x,y,x+10,y);      //øvre linje
+          drawLine(x,y-10,x+10,y-10);  //nedre linje
+          drawLine(x,y,x,y-10);      //kantlinje
+
+          drawLine(x+10,y,x+15,y-5);    //trekant fra oppe
+          drawLine(x+10,y-10,x+15,y-5);  //trekant fra nede
+            
+        }
+        else if(direction == "left") {
+          drawLine(x,y,x-10,y);      //øvre linje
+          drawLine(x,y-10,x-10,y-10);  //nedre linje
+          drawLine(x,y,x,y-10);      //kantlinje
+
+          drawLine(x-10,y,x-15,y-5);    //trekant fra oppe
+          drawLine(x-10,y-10,x-15,y-5);  //trekant fra nede
+        }
+        else if(direction == "up") {
+          drawLine(x,y,x,y+10);      //venstre linje
+          drawLine(x-10,y,x-10,y+10);  //høgre linje
+          drawLine(x,y,x-10,y);      //kantlinje
+
+          drawLine(x,y+10,x-5,y+15);    //trekant fra venstre
+          drawLine(x-10,y+10,x-5,y+15);  //trekant fra høgre
+        }
+        else if(direction == "down") {
+          drawLine(x,y,x,y-10);      //venstre linje
+          drawLine(x-10,y,x-10,y-10);  //høgre linje
+          drawLine(x,y,x-10,y);      //kantlinje
+
+          drawLine(x,y-10,x-5,y-15);    //trekant fra venstre
+          drawLine(x-10,y-10,x-5,y-15);  //trekant fra høgre
+        }
+      }
+      function createLeftButtons(x,y) {
+        drawButton(x-25,y+5,"right");
+        drawButton(x+15,y+5,"left");
+        drawButton(x,y-20,"up");
+        drawButton(x,y+20,"down");
+      }
+
+      function createMiddleButtons(x,y) {
+        drawButton(x+5,y, "right");
+        drawButton(x-15,y, "left");
+      }
+
+      function createRightButtons(x,y) {
+          drawCircle(x,y+14,7,0,2,false);
+          drawCircle(x+14,y,7,0,2,false);
+          drawCircle(x,y-14,7,0,2,false);
+          drawCircle(x-14,y,7,0,2,false);
+      }
+
+      function createFigure() {
+        drawLine(200,30,250,30);
+        drawLine(200,30,150,30);
+
+        drawCircle(255,30, 5, 1, 1.5, false);
+        drawCircle(145,30, 5, 0, 1.5, true);
+
+        drawLine(255,25,300,25);
+        drawLine(145,25,100,25);
+
+        drawCircle(300, 30, 5, 0.5, 1.5, true);
+        drawCircle(100, 30, 5, 0.5, 1.5, false);
+        
+        drawCircle(95, 40, 5, 1, 1.6, false);
+        drawCircle(305, 40, 5, 0, 1.4, true);
+
+        drawLine(90, 40, 70, 90);
+        drawLine(310, 40, 330, 90);
+
+        drawCircle(100,90,30,0,1,false);
+        drawCircle(300, 90,30,0,1, false);
+        
+        drawLine(130,90, 140, 80);
+        drawLine(270,90, 260, 80);
+
+        drawLine(140, 80, 260, 80);
+        
+      }
+      
+      function init() {
+        createLeftButtons(125,60);  //fix opp desse knappane litt, sånn at dei matche som eg har gjort med rights buttons. Enklare å forholde seg til.
+        createMiddleButtons(200,60);
+        createRightButtons(285,60);
+
+        createFigure();
+      }
+
+      init();
+
+    </script>
+  </body>
+</html>

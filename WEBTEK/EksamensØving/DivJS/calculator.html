@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+
+        <label for="firstNumber">First Number:</label>
+        <input type="number" id="firstNumber" name="firstNumber" required min="0"></br>
+        <label for="secondNumber">Second Number:</label>
+        <input type="number" id="secondNumber" name="secondNumber" required min="0"></br>
+        <button type="submit" onclick="calculate()">Submit</button>
+
+        <div>(a+b)^2 = <strong id = "calc1"></strong></div>
+        <div>((a-b)^2 = <strong id = "calc2"></strong></div>
+        <div>(a^2)+(b^2) = <strong id = "calc3"></strong></div>
+        <div>(a^2)+(b^2) = <strong id = "calc4"></strong></div>
+        <div>sqrt(a^2 + b^2) = <strong id = "calc5"></strong></div>
+
+        
+    <script>
+    function calc1(a, b) {
+        var temp = parseInt(a)+parseInt(b);
+        var calc = Math.pow(temp,2);
+        return calc;
+    }
+    function calc2(a, b) {
+        var temp = parseInt(a)-parseInt(b);
+        var calc = (Math.pow(temp,2));
+        console.log(calc);
+        return calc;
+    }
+    function calc3(a, b) {
+        var calc = (Math.pow(a,2) + Math.pow(b,2));
+        return calc;
+    }
+    function calc4(a, b) {
+        var calc = (Math.pow(a,2) - Math.pow(b,2));
+        return calc;
+    }   
+    function calc5(a, b) {
+        var innerCalculate = Math.pow(a,2)+Math.pow(b,2);
+        var number = Math.sqrt(innerCalculate);
+        return number;
+    }
+    function calculate() {
+        var firstNum = document.getElementById("firstNumber").value;
+        console.log(firstNum);
+        var secondNum = document.getElementById("secondNumber").value;
+        console.log(secondNum);
+        
+        document.getElementById("calc1").innerText = calc1(firstNum, secondNum);
+        document.getElementById("calc2").innerText = calc2(firstNum, secondNum);
+        document.getElementById("calc3").innerText = calc3(firstNum, secondNum);
+        document.getElementById("calc4").innerText = calc4(firstNum, secondNum);
+        document.getElementById("calc5").innerText = calc5(firstNum, secondNum);
+    }
+    </script>
+    </body>
+</html>

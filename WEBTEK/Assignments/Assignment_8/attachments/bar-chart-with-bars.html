@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tax forms: Bar chart with lines</title>
+    <meta charset="UTF-8">
+    <script src="taxForms.js"></script>
+  </head>
+  <body>
+
+    <canvas id="chart" width="700" height="550"></canvas>
+
+    <script>
+      const canvas = document.getElementById('chart');
+      const context = canvas.getContext('2d');
+
+      /* Draw a line from (fromX, fromY) to (toX, toY) */
+      function drawLine(fromX, fromY, toX, toY) {
+        context.beginPath();
+        context.moveTo(toX, toY);
+        context.lineTo(fromX, fromY);
+        context.stroke();
+      }
+
+      /* Draw a text (string) on (x, y) */
+      function drawText(text, x, y) {
+        context.fillStyle = 'black';
+        context.fillText(text, x, y);
+      }
+
+      /* Draw a text and with a line to its right */
+      function drawLineWithText(text, fromX, fromY, toX, toY) {
+        drawText(text, fromX - 50, fromY + 10);
+        drawLine(fromX, fromY, toX, toY);
+      }
+      
+      /* Draw all lines in canvas downwards. */
+      function drawAllLines() {
+        for(i=1; i < 11; i++) {
+          var num = i*50;
+          var text = (11-i)*100000;
+
+          drawLineWithText(text, 50, num, 600, num);
+        }
+      }
+      
+      /* Creates rectangle in Canvas. */
+      function drawRectangle(x,y,width,height,color) {
+        context.fillStyle = color;
+        context.fillRect(x, y, width, height);
+      }
+
+      function setLabels() {    
+        drawText("Income", 655, 62.5, 700, 50);
+        drawRectangle(600, 50, 50, 25, "red");
+
+        drawText("Wealth", 655, 112.5, 700, 100);
+        drawRectangle(600, 100, 50, 25, "blue");
+      }
+
+      function drawBars(list) {
+        var incomeX = 100;
+        var wealthX = 125;
+        var wealth;
+        var income;
+
+        for(item in list) {
+            income = list[item].income / 1000000;
+            wealth = list[item].wealth / 1000000;
+            
+            drawRectangle(incomeX, 550 - 500*(income), 25, 550, "red");    //draw income diagram
+            drawRectangle(wealthX, 550 -500*(wealth), 25, 550, "blue");   //draw wealth diagram
+
+            incomeX += 200;
+            wealthX += 200;;
+        }
+      }
+
+      drawAllLines();
+      setLabels();
+      drawBars(taxForms);
+    </script>
+  </body>
+</html>

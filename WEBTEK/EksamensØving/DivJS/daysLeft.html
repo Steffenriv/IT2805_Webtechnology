@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lightbolb</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>See date:</h1>
+        <p id ="event" onclick="seeTime()" src="lightbolbOFF.jpeg" width="200" height="200">Click here</p>
+        <p id ="answer"></p>
+
+        <div id="write"></div>
+        <script>
+            function seeTime() {
+                var answer = document.getElementById("answer");
+                var today = new Date(23,01,11);
+                var christmas = new Date(23,12,24);
+
+                var diffTime = christmas.valueOf() - today.valueOf();
+                var days = diffTime / (24*60*60*1000);
+
+                answer.innerText = days + isPrime(days);
+                
+            }
+            function isPrime(num) {
+                var sqrtnum=Math.floor(Math.sqrt(num));
+                var prime = num != 1;
+                for(var i=2; i<sqrtnum+1; i++) { // sqrtnum+1
+                    if(num % i == 0) {
+                    return " is not prime";
+                }
+                }
+                return " is prime";
+            }
+        </script>
+    </body>
+</html>

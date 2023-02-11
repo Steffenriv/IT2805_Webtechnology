@@ -1,0 +1,24 @@
+body {
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: blanchedalmond;
+    font-family: Verdana;
+}
+
+header {
+    margin-top:0px;
+    text-align: center;
+    color: gray;
+    text-decoration: dashed;
+    font-size: 60px;
+}
+
+form {
+    margin:6%;
+    padding:10px;
+}
+
+p {
+    font-size: 20px;
+    text-decoration: underline;
+}

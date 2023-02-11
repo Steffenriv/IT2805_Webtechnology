@@ -1,0 +1,18 @@
+1. Why do mobile phones usually ignore auto play on video elements?
+    - Usually has to do with performance, as the mobile phone does not have the strong hardware as computers do.
+    An important hardware that get's really affected is the battery as if it autoplays video elements it can run out
+    of battery quicker. Which most users do not like.
+
+2. What will the CSS snippet at the end of this section do if the visitor is browsing on a device with 320
+x 568 resolution?
+    - The css at the end simply won't work. As it is only set up for certain situations. Only when media query is true, which it very well could
+    be in this situation as phones do work on media query. However the most notable, is that the width is min 768 px which is more than the device 
+    width. This statement will therefore be handled and the css inside won't apply. As it does not meet the requirements which it sets.
+
+3. Mention some of the advantages of having a single responsive website instead of dedicated versions
+like m.til.no for mobile and til.no for desktop?
+    -The advantages is that when you have a responsive website, it would be set up to work for all devices. Which would make workload
+    on developers a lot easier when they only have to work on one website. Working on multiple dedicated websites is a lot harder, and
+    can also be troublesome when meeting issues you don't meet elsewhere. Having a single website for all purposes is generally a good 
+    practice, and would make for easier toll on development team. However it may lack in some areas as it would not be able to 
+    achieve all the same functionalities as a single dedicated website would.

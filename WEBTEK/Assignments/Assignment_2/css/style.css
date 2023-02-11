@@ -1,0 +1,40 @@
+body {
+    width: 1000px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-family: Sans-serif;
+    background-color: bisque;
+}
+
+header {
+    font-size: 1.8em;
+    font-family: sans-serif;
+}
+
+header img {
+    max-width: 150px;
+    border-style:groove;
+    border-color:black;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+p, blockquote {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: Verdana;
+}
+
+ol, ul {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: Verdana;
+    text-align: left;
+    margin-left: 75px;
+}
+
+footer {
+    margin: 75px;
+}

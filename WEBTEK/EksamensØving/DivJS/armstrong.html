@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>isArmstrongNumber</title>
+    </head>
+    <body>
+        <h1>Is the number an isArmstrongNumber?</h1>
+        <label for="input">Number: </label>
+        <p type="number" id="input" name="input" onclick="isArmstrongNumber(1634)">CLICK HERE!</p>
+        <p>Answer:<strong id="value"></strong></p>
+        <script>   
+            function isArmstrongNumber(number) {
+                var value = document.getElementById("value");
+
+                var numLength = number.toString().length;
+                console.log(numLength);
+                var checkNum = 0; 
+                console.log(String(number).charAt(0));
+                console.log(String(number).charAt(2));
+
+                for(var i = 0; i < numLength; i++) {
+                    checkNum += Math.pow(String(number).charAt(i),numLength)
+                }
+
+                if(number == checkNum) {
+                    value.innerText = "It is"; 
+                    return true;
+                }
+                else {
+                    value.innerText = "It is not";  
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

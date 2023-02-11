@@ -1,0 +1,25 @@
+1. When calling getContext('2d') on a Canvas element, it will return a drawing context (i.e. the type
+of canvas) - in this case a two-dimensional context. How can we get a three-dimensional context
+instead?
+    -We could of course make an illusion of a 3d element using 2d context. However a more practical way
+    would be to actually used built in functionality to easier get a 3d illusion(it will always be an
+    illsion as our screens are not in 3d unfortunately) This can be done using the webGL which replaces
+    2d in context.
+2. How would you create a blue circle using the Canvas element? Explain with words or code.
+    - We can use the arc function is canvas to create sircular shapes in any sizes, with an important ascpect
+    being to use pi in one of the angle slots in the function, which is one of the two last inputs.
+    We also ofc then have to apply the fillstyle command on the context to color it properly.
+3. What is a more terse (also known as shorter) way of writing the loop in the following using the
+Array.filter method?
+    -we can simply use for country in contries instead of i=0 i < countries.length etc...
+    an example:
+const countries = ['Norway', 'Sweden', 'Denmark', 'New Zealand'];
+const countriesStartingWithN = [];
+
+for (country in countries) {
+ if (countries[country].startsWith('N')) {
+ countriesStartingWithN.push(country);
+ }
+}
+
+this will make it a lot easier to understand and also shorten it with one line.

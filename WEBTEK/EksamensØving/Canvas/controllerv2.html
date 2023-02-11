@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tax forms: Bar chart with lines</title>
+    <meta charset="UTF-8">
+    <script src="taxForms.js"></script>
+  </head>
+  <body>
+    <canvas id="chart" width="400" height="120"></canvas>
+
+    <script>
+      const canvas = document.getElementById('chart');
+      const context = canvas.getContext('2d');
+
+      /* Draw a line from (fromX, fromY) to (toX, toY) */
+      function drawLine(fromX, fromY, toX, toY) {
+        context.beginPath();
+        context.moveTo(toX, toY);
+        context.lineTo(fromX, fromY);
+        context.stroke();
+      }
+
+      /* Creates ARC with the given inputs, easier to use*/
+      function drawCircle(x, y, r, sA, eA,aC) {
+        context.beginPath();
+        context.arc(x, y, r, sA * Math.PI, Math.PI * eA, aC);  //X, Y, R, vinkel 1, vinkel 2, if true = reverse.
+        context.stroke();
+      }
+      
+      function drawButton(x, y, direction) {
+        if(direction == "right")  {
+          drawLine(x,y,x+10,y);      //øvre linje
+          drawLine(x,y-10,x+10,y-10);  //nedre linje
+          drawLine(x,y,x,y-10);      //kantlinje
+
+          drawLine(x+10,y,x+15,y-5);    //trekant fra oppe
+          drawLine(x+10,y-10,x+15,y-5);  //trekant fra nede
+            
+        }
+        else if(direction == "left") {
+          drawLine(x,y,x-10,y);      //øvre linje
+          drawLine(x,y-10,x-10,y-10);  //nedre linje
+          drawLine(x,y,x,y-10);      //kantlinje
+
+          drawLine(x-10,y,x-15,y-5);    //trekant fra oppe
+          drawLine(x-10,y-10,x-15,y-5);  //trekant fra nede
+        }
+        else if(direction == "up") {
+          drawLine(x,y,x,y+10);      //venstre linje
+          drawLine(x-10,y,x-10,y+10);  //høgre linje
+          drawLine(x,y,x-10,y);      //kantlinje
+
+          drawLine(x,y+10,x-5,y+15);    //trekant fra venstre
+          drawLine(x-10,y+10,x-5,y+15);  //trekant fra høgre
+        }
+        else if(direction == "down") {
+          drawLine(x,y,x,y-10);      //venstre linje
+          drawLine(x-10,y,x-10,y-10);  //høgre linje
+          drawLine(x,y,x-10,y);      //kantlinje
+
+          drawLine(x,y-10,x-5,y-15);    //trekant fra venstre
+          drawLine(x-10,y-10,x-5,y-15);  //trekant fra høgre
+        }
+      }
+
+      /*Alle knappa på venstre side*/
+      function createLeftButtons(x,y) {
+        drawButton(x-25,y+5,"right");
+        drawButton(x+15,y+5,"left");
+        drawButton(x,y-20,"up");
+        drawButton(x,y+20,"down");
+      }
+
+      /*Alle knappa på midten*/
+      function createMiddleButtons(x,y) {
+        drawButton(x+5,y, "right");
+        drawButton(x-5,y, "left");
+      }
+
+      /*Alle knappa på høgre side*/
+      function createRightButtons(x,y) {
+          drawCircle(x,y+14,7,0,2,false);   
+          drawCircle(x+14,y,7,0,2,false);
+          drawCircle(x,y-14,7,0,2,false);
+          drawCircle(x-14,y,7,0,2,false);
+      }
+
+      function createFigure() {
+        //linje over midt knappa
+        drawLine(140,30,220,30);
+
+        //bak knapp på kvar side
+        drawCircle(135,30,5,0,1.5,true); 
+        drawCircle(225,30,5,1.5,1,true); 
+
+        drawLine(135,25,90,25);    
+        drawLine(225,25,270,25);    
+
+        drawCircle(90,30,5,1.5,1,true);
+        drawCircle(270,30,5,0,1.5,true);
+        
+        //Beveger seg nedover fra knappane på begge sider
+        drawCircle(85,35,5,1.5,1,true);
+        drawCircle(275,35,5,0,1.5,true);
+        
+        drawLine(80,35,60,90);
+        drawLine(280,35,300,90);
+
+        //Sirkelane på bunn av kontrolleren
+        drawCircle(90,90,30,1,0,true);
+        drawCircle(270,90,30,1,0,true);
+
+        //Under midt knappane
+        drawLine(120,90,140,75);
+        drawLine(240,90,220,75);
+
+        drawLine(140,75,220,75);
+      }
+      
+      function init() {
+        createLeftButtons(120,60); 
+        createMiddleButtons(180,60);
+        createRightButtons(240,60);
+
+        drawCircle(180,55, 30, 0,2, true);
+
+        createFigure();
+      }
+
+      init();
+
+    </script>
+  </body>
+</html>

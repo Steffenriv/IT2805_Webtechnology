@@ -1,0 +1,20 @@
+Questions (10%)
+
+1. Why does the following expression 0.1 + 0.2 === 0.3 evaluate to false in Javascript?
+    - Due to Javascript using a 32 bit floating system this causes errors when rounding floating point numbers, such as
+    0.1 + 0.2, due to this, it will not be === 0.3 when trying to evaulte it.
+2. What does the method attribute on a form element decide?
+    - It decides which way to actually send the data that has been gone through in the form. It will send either as a GET method or POST method. 
+    Get is a practial way of submission, which leads to the user beeing able to see the information as a part of the url. This way on websites with dedicated 
+    actionpages, it will be able to tell the difference between actionpage and regular page. However get could also lead to some security issues, as it is a lot easier
+    to get hold of sensitive information that way. Which is where the POST method is regularly used.
+3. Explain why the form fields appear in the URL when the method on form element is changed to GET?
+    - Get method requests a representation of the data. This way it can show the data properly later on, that is also why it is shown in the url, as the representation 
+    of the data is shown lastly as it is what it should show.
+4. Why is it considered bad practice to only validate form input with HTML5 and/or Javascript?
+    - One part of it is that js can be turned of in browser, which could ruin all kinds of form validation completly. Another part is code errors which could lead 
+    to it not working and is also easier to be tampered with later on. Such as fake submissions, malecious usage etc. In other words one cannot trust What
+    the user is doing with the data that they are sending. Which could lead to huge problems later on.
+5. When is it appropriate to use textarea over input?
+    - In general input fields are only meant as a field which you use for short answers, longer answers are meant to be used in textareas. The reason for this
+    is simply storage manipulation i.e how to actually store the data that is sent. Longer answers are often stored in other ways, and therefore use textareas.

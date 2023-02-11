@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p></p>
+    </body>
+<script>
+    function isArmstrongNumber(number) {
+        var numLength = number.length;
+        var checkNum = 0; 
+
+        for(var i = 0; i < numLength; i++) {
+            checkNum += number[i]**numLength;
+        }
+
+        if(number == checkNum) 
+            return true;
+        else 
+            return false;
+        
+        console.log(isArmstrongNumber(1634));
+    }
+</script>
+</html>

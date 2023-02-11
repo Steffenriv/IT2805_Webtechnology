@@ -1,0 +1,24 @@
+1. Why does inline style CSS override rules defined in style elements and external stylesheets?
+    - Because inline styling is prioritized over styling in the head of the file, and styling in the head of the files
+    is prioritized over styling in css. This is due to styling through css is not the start of html styling, 
+    as it did not exist for while after html was implemented. However it also makes for easier use, for when you want to style certain elements
+    differently than others. Which can come in quite handy.
+2. Give a brief example of when to use ID (#id) and when to use classes (.class) in CSS.
+    - An example of when to use id, is when you have a biblography and you want to refer to a link in that biblography. You can then write the link with an id,
+    and then refer to it earlier in the text with #that id. In other words, the id indicator is something you use when you want to point to one certain element.
+    The class selector however, points to multiple to something with multiple elements. Such as the biblography we mentioned earlier. This class has multiple ids.
+    One for every link in the biblography. Therefore the biblography in itself is a class that includes multiple id elements. The whole point of class and id, is
+    so that we do not use the same selector everywhere in the code. This can make it harder to understand which is supposed to be prioritized. Which then again,
+    makes it easier for us as developers to design, style and link to. 
+3. What does RGBA mean and what colors can you express with it?
+    - RGBA stands for red, green, blue, alpha. Which is an extension of the usual rgb colors that is used to express all colors. The alpha paramater is a number between
+    0 and 1, which explains how transparent the color should be. Which can be a really useful tool to use later. In other words RGBA, is the color standard where
+    you can get any color (in reality there is only 256 in each r,g,b. However this leads to 256*256*256 color which in reality is basicly all colors.) in differently
+    transparency levels. Which is also quite a nice function to use.
+4. Why do we include CSS files inside the head element and not inside the body element?
+    - This is due to the head element including all files and all information that should not be available for public use. We do not want to show around the css file
+    in the body, as the body is meant to be including all elements that should be visible for public eyes. Not the other way around. The reason for this, is simply
+    to have a hierarchy in the code such that we can easily get an overview over where things are. Therefore we know that all elements that does have information, not
+    publicly seen are in the head element. 
+5. What CSS selector matches all the p elements inside the article element in the following HTML?
+    - we can use the selector article p {} as this would indicate all article elements and all p elements in the article elements.

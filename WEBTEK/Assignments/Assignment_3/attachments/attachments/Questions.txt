@@ -1,0 +1,58 @@
+1. What is the difference between position: absolute and position: fixed?
+    -Position fixed sets to position of an object at a certain point on the screen,
+    which will not change even if scroll down or up on the site. Can also get in the way of
+    text that is in the fixed texts way. 
+    Absoulute however will set the position to a certain point on the website and stay there, which means 
+    we can go up and down on the site. And it will stay in the same position. Example if we set position to absolute and bottom to 0
+    on footer. it will be set at the bottom of the original size site. However if we go further down the orginal site, scrolling, we 
+    will go past the footer point. Unlike fixed which will always stay on the screen no matter how far down or up we go.
+2. With CSS3, how do we access the third element within another element?
+    -We can use :third after declaring the element. Example for a class container in a div we can write, 
+    div.container:third or for third element in only container we can write .container:third
+
+
+
+     div {
+      margin: 10px;
+    }
+
+    div.header{
+      padding: 0px; 
+      margin-left: 200px;
+      margin-right: 200px;
+      text-align: center;
+    }
+
+    div.box {
+      margin-left: 200px;
+      margin-right: 200px;
+    }
+
+    div.two {
+      float: left;
+      position: absolute;
+      bottom: 65px;
+    }
+
+    div.five {
+      float: right;
+      text-align: center;
+      position: absolute;
+      bottom: 65px;
+      margin-right: 200px;
+    }
+
+    div.three {
+      float: right;
+      margin-right: -50px;
+      margin-left: 50px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    div.four {
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      float: center;
+    }
