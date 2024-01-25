@@ -1,0 +1,480 @@
+/*For every page, general body header and navbar settup*/
+body {
+  margin: 0px;
+  width: 100%;
+  background-color: blanchedalmond;
+  font-family: Helvetica, sans-serif;
+}
+
+#header {
+  margin: 0px;
+  background-color: dimgray;
+  height: 35%;
+  text-align: center;
+  position: relative;
+}
+
+#header a {
+  text-decoration: none;
+}
+
+#navBar {
+  margin-bottom: 0px;
+  overflow:auto;
+  background-color: black; 
+  width: 100%;
+  min-height:48px;
+  z-index: 10;
+}
+
+#navBar a {
+  display:block;
+  width:15%;   
+  background-color: black; 
+  max-width: 178.5px;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 10;
+}
+
+#navBar a:hover {
+  background-color: gold;
+  color: black;
+}
+
+#navBar a.active {
+  background-color: silver;
+  color: white;
+  z-index: 10;
+}
+
+.pageBody{
+  margin-top: 0px;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  width: 85%;
+  min-height: 720px;
+}
+
+.setFixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.setFixed + .pageBody {
+  padding-top: 48px;
+}
+
+article {
+  text-align:  center;
+
+}
+
+#baselayerLogoFont{
+  width: 35%;
+  margin-top: 15px;
+}
+
+#baselayerLogo{
+  width: 10%;
+}
+
+footer{
+  width: 100%;
+  margin-top: 20px;
+  height: 50px;
+  text-align: center;
+  background-color: dimgray;
+  color: white;
+  padding-top: 1%;
+}
+
+
+
+ /*About.html*/ 
+.aboutPage {
+  text-align: center;
+  max-width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 20px;
+ font-size: large;
+}
+/* about bilder */
+.aboutPictures {
+  width: 97.5%;
+  height: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2.5%;
+}
+
+#aboutPic1 {
+  width: 30%; 
+  border-radius: 50%;
+  padding: 1%;
+}
+            
+#aboutPic2 {
+  width: 30%;
+  border-radius: 50%;
+  padding: 1%;
+}
+
+#aboutPic3 {
+  width: 30%;
+  border-radius: 50%;
+  padding: 1%;
+}
+               
+#aboutCustomer1{
+  padding: 1%;
+  width: 30%;
+  text-align: center;
+}
+            
+#aboutCustomer2{
+  padding: 1%;
+  width: 30%;
+  text-align: center;
+}
+
+  #aboutCustomer3{
+  padding: 1%;
+  width: 30%;
+  text-align: center;
+}
+
+
+
+/*Homepage.html*/
+#caesarsHomepage{
+  width: 100%;
+  border: solid black 2px;
+}
+#welcome{
+  font-size: 50px;
+}
+#slogan{
+  font-size: 30px;
+  font-style: italic;
+}
+
+#homeText{
+  font-size: 20px;
+  line-height: 30px;
+} 
+
+
+
+
+/*Pictures.html*/
+#picturesText {
+  text-align: center;
+}
+
+  /* The whole slideshow */
+.slideshow {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+  /* Hide the images by default */
+.picSlides {
+  display: none;
+}
+
+  /* The next & previous buttons */
+.previous, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+  /* The "next button" needs to be to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+  /* The buttons need some hover effect to show more easily */
+.previous:hover, .next:hover {
+  background-color: rgba(222, 231, 230, 0.8);
+}
+
+  /* The text of pictures */
+.pictureText {
+  color: #ffffff;
+  font-size: 40px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+  /* Number text (i.e. 1/5) */
+.numberText {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+  /* The circles below the slideshow */
+.circles {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(82, 57, 220);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1s ease;
+}
+
+.active, .circles:hover {
+  background-color: #e2a850;
+}
+
+  /* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/*Services.html*/
+.serviceimg {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.serviceimg:hover {
+  box-shadow: 5px 5px 50px 10px black;
+}
+
+
+
+/*Contact.html*/          
+.pageBody {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#contactInfo {
+  margin-top: 10%;
+  background-color: bisque;
+  border: 3px solid silver;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#contactFAQ {
+  margin-top: 10%;
+  background-color: bisque;
+  border: 3px solid silver;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#contactEmail {
+  border-left: 3px solid silver;
+  border-right: 3px solid silver;
+}
+
+.flexbox1 {
+  width: 45%;
+  margin-right: 9%;
+  }
+
+.flexbox2 {
+  width: 45%;
+  margin-top: 4.5%;
+}
+
+#contactPage form {
+  width: 100%;
+  margin-top: 15%;
+}
+
+#contactPage input {
+  background-color: bisque;
+  width: 45%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 20px;
+  font-size: 20px;
+}
+
+#submit:hover {
+  box-shadow: 3px 3px 10px;
+}
+
+#submitResetBtn:hover {
+  box-shadow: 3px 3px 10px black;
+}
+
+#caesarsstatue {
+  position:absolute;
+  top: 75%;
+  right: 5%;
+  width: 15%;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 15px 5px black;
+}
+
+#contactPage hr {
+  width: 70%;
+  border-color: gold;
+}
+
+#contactPage li {
+  margin: 10px;
+}
+
+#contactPage ul {
+  list-style-type: square;
+}
+
+.contactText {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+#contactSubmitMessage {
+  position: absolute;
+  left: 25%;
+  top: 40%;
+  width: 50%;
+  height: 75%;
+  background-color: antiquewhite;
+  border: 3px solid black;
+  text-align: center;
+  visibility: hidden;
+}
+#contactSubmitMessage img {
+  max-height: 25%;
+}
+#submitResetBtn {
+  position: absolute;
+  right: 2.5%;
+  bottom: 2.5%;
+  width: 5%;
+  background-color: black;
+  color: white;
+  border: 3px solid silver;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  #caesarsstatue {
+      display: none;
+  }
+
+  .flexbox1, .flexbox2 {
+      width: 100%;
+      margin-right: 0;
+  }
+
+  #contactPage input {
+      width: 95%;
+  }
+}
+
+
+
+
+/*Games.html*/
+#gamePage {
+  text-align: center;
+}
+#pageBody{
+  padding: 20px;
+}
+
+#roulette{
+  width: 20%;
+  height: 21%;
+  transition: width 1s, height 1s;
+  margin-top: 10px;
+  margin-left: 6%;
+  margin-bottom: 10%;
+  position: absolute;
+  overflow: hidden;
+}
+#rouletteIMG{
+  width: 100%;
+}
+
+#poker{
+  width: 20%;
+  height: 21%;
+  transition: width 1s, height 1s;
+  margin-top: 10px;
+  margin-left: 39%;
+  margin-bottom: 50px;
+  position: absolute;
+  overflow: hidden;
+}
+#pokerIMG{
+  width: 100%;
+}
+
+#blackjack{
+  width: 20%;
+  height: 21%;
+  transition: width 1s, height 1s;
+  margin-top: 10px;
+  margin-left: 71%;
+  margin-bottom: 10%;
+  position: absolute;
+  overflow: hidden;
+}
+#blackjackIMG{
+  width: 100%;
+}
+
+#gameInfo{
+  min-height: 250px;
+  margin-top: 22%;
+  padding: 20px;
+  font-size: larger;
+  display:block;
+}
+
+#gamePage h4{
+  font-size: larger;
+}

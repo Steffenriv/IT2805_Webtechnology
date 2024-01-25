@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact-Info</title>
+        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+        <link rel="stylesheet" href="css/layout.css">
+        <script>
+            function changeDisplay() {
+                document.getElementById('contactSubmitMessage').style.visibility = "visible";
+            }
+            function resetPage() {
+                document.getElementById('contactSubmitMessage').style.visibility = "hidden";
+            }
+            function clearInput() {
+                var contactInputs = document.getElementsByClassName('contactInput');
+                for (var i = 0; i < contactInputs.length; i++) {
+                    contactInputs[i].value = '';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="pageBody">
+            <div id="contactPage">
+            <div class="container">
+                <div class="flexbox1">
+                    <div id="contactInfo">
+                        <h1>Contact Information</h1>
+                        <hr>
+                        <p>Phone: (866) 227-5938</p>
+                        <p>Email: caesarspalace@bestcasino.com</p>
+                    </div>
+
+                    
+                    <div  id="contactFAQ">
+                        <h1>FAQ</h1>
+                        <hr>        
+                        <ul>
+                            <li>What casino game is best for becoming rich?</li>
+                            <li>How old must you be to play in the casinoes?</li>
+                            <li>Should I bring my kids or leave them at home?</li>
+                            <li>Is Caesars far from The Strip?</li>
+                            <li>How do you get to Caesars from the airport?</li>
+                            <li>Where should I go to meet celebrities?</li>
+                            <li>Does the cash make the money flow?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="contactEmail" class="flexbox2">
+                        
+                    <p class="contactText">We want to give our costumers the best possible experience through
+                            our services, and will always strive to be better.</p>
+                    <p class="contactText">Send us an email, and our team will get in touch with you as soon as possible.</p> 
+                    <hr>
+                    <form action="#" onsubmit="changeDisplay();clearInput();return false;">
+                        <input type="text" class="contactInput" name="name" placeholder="Name:" maxlength="35" required><br>
+                        <input type="email" class="contactInput" name="name" placeholder="Email:" maxlength="35" required><br>
+                        <input type="text" class="contactInput" name="inquiry" placeholder="Your inquiry" style="height: 180px;" required><br>
+                        <input type="submit" id="submit" value="Submit" style="background-color: gold; height: 30px; width: 100px;">
+                    
+                    </form>
+                    <img id="caesarsstatue" src="img/caesars_statue.jpg" alt="Caesars statue">
+                    
+                </div>
+
+                
+            </div>
+
+            <div id="contactSubmitMessage">
+                <h1>Thank you for your feedback.</h1>
+                <hr><br>
+                <p>Your inquiry have been submitted.</p>
+                <p>Our team will get back to you as soon as possible.</p>
+                <p>If you don't hear anything within the next few days, feel free to contact us again.</p>
+                <img src="img/caesars_palace_logo.png" alt="Caesars Palace Logo">
+                <button type="button" id="submitResetBtn" onclick="resetPage()">X</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/modularity.js"></script>
+    <script src="js/navbarScrolled.js"></script>
+</body>
+</html>

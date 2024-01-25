@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang>
+    <body>
+        <p>
+            <label>USD</label>
+            <input id="input" type="number" placeholder="USD"
+            oninput="currencyConverterUSD(this.value)"
+            onchange="currencyConverterUSD(this.value)">
+          </p>
+          <p>USD: "Amerikansk Dollar": <span id="outputUSD"></span></p>
+          <script src="currency.js"></script>
+           
+        
+        <p>
+            <label>NOK</label>
+            <input id="inputNOK" type="number" placeholder="NOK" 
+            oninput="currencyConverterNOK(this.value)"
+            onchange="currencyConverterNOK(this.value)">
+          </p>
+          <p>Nok: "Norske Kroner": <span id="outputNOK"></span></p>
+
+          <p>
+            <label>EUR</label>
+            <input id="inputEUR" type="number" placeholder="EUR" 
+            oninput="currencyConverterEUR(this.value)"
+            onchange="currencyConverterEUR(this.value)">
+          </p>
+          <p>EUR: "Euro": <span id="outputEUR"></span></p>
+          <p>
+            <label>GBP</label>
+            <input id="inputGBP" type="number" placeholder="GBP" 
+            oninput="currencyConverterGBP(this.value)"
+            onchange="currencyConverterGBP(this.value)">
+          </p>
+          <p>GBP: "Britisk Pund": <span id="outputGBP"></span></p>
+          <p>
+            <label>CNY</label>
+            <input id="inputCNY" type="number" placeholder="CNY" 
+            oninput="currencyConverterCNY(this.value)"
+            onchange="currencyConverterCNY(this.value)">
+          </p>
+          <p>CNY: "Kinesisk yuan": <span id="outputCNY"></span></p>
+        
+        
+    </body>
+
+
+</html>

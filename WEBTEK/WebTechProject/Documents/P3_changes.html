@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3 Changes</title>
+    <link rel="stylesheet" href="../css/StyleP2.css">
+</head>
+<body>
+    <header>
+        <h1>P3 Changes</h1>
+        <h2>
+            Kristian Myklebust, Steffen Rivedal Eimhjellen, Daniel Kristoffersen, 
+            Ferdinand Henrik Gjesdahl, Jonathan Løvdal and Johan Otto Munkeby
+        </h2>
+        <br>
+            <p id="date">
+                21.11.2022
+            </p>
+        <br>
+    
+    </header>
+
+    <div class="info">
+        <p>
+
+        </p>
+
+    </div>
+    <div class="administrativeDetails">
+    <h2>
+            Administrative details
+        </h2>
+            <br>
+        <p>
+            <b>Client: </b> Caesars Palace casino, represented by Lance Armstrong
+        </p>
+        <p>
+            <b>Website name:</b> Caesars Palace 
+        </p>
+        <p>
+            <b>Contact person:</b> Johan Otto Munkeby
+        </p>
+        <a href="../homepage.html">The homepage / startingpage</a>
+    </div>
+    <div class="Changes"> 
+
+
+        <h2> 
+            The changes:
+        </h2>
+        <p> 
+            We have kept to our plan off making six easy to access pages, 
+            but we have had some changes with html but especially with some of our javascript implementation. We also had
+            some small changes in the general style off the website with some change in backround color and the banner.
+            These changes are summarized below. 
+        </p>
+
+        
+            <h3>Navigation structure</h3>
+        <p> The navigation structure was changed after some consideration. The plan was to use a Caesar's palace logo for the homepage link, but we felt this 
+            were a bit unclear for the user, and instead changed to a simple "hompepage" button. The logo/banner at the top of the page were also used as a homepage
+            link for the user to navigate from any page, back to homepage. The initial plan was also to have a navbar where hovering revealed
+            further links in a dropdown menu. This feature were also dropped since it was not necessary to reach the spesific content of the page.
+        </p>
+
+        
+            <h3>Styling </h3>
+        <p> Background-color was set to blanchedalmond (rgb(255, 235, 205)) <br>
+            Navbar-hover-effect-color was set to gold (rgb(255, 215, 0)), the plan was also to make the links increase in size when hovered upon,
+            but this feature were removed due to estethics. We also initially planned to make the navbar which had been selected silver,
+            but we removed this effect due to estethics and the fact that the user can navigate to any page with only one click anyways <br>
+            The background color of the logo picture on top of every page were set to dimgray (rgb(105, 105, 105)).
+
+
+        </p>
+
+      
+            <h3>Contact page</h3>
+        <p> The contact page has pretty muched stayed to the before-made plan. The page includes the hotels contact information
+            as well as a FAQ part. In addition it features an email-system whih includes a couple javascript-features that werent
+            planned before-hand. When submitting the form a javascript function is called which displays a div in the middle of the screen.
+            Inside this div there is also an exit-button which also calls on a fucntion that removes the div again, aswell as reseting the form inputs.
+            We decided to also add a picture on the page.
+        </p>
+       
+            <h3>About page</h3>
+        <p> The about page remains mostly the same, except for the pictures which we set to 30% widht instead of a certain amount 
+            off pixels for responsive web design. we also made them with rounded edges to give the page a smoother feel. 
+        </p>
+       
+            <h3>Games page</h3>
+        <p> The games site fulfills the purpose we imagined, but with some changes to the javascript. 
+            The plan was originally to show the game info within an expanding div when the pictures is hovered.
+            We experienced a few difficulties with this, among other things the direction of the transitions
+            (they automaticaly expanded towards the right, so the picture furthest to the right expanded outside of the page),
+            and the transitions when the window is minimized. We chose to skip this part, and rather make the game information
+            appear below the pictures when they are hovered.
+        </p>
+
+       
+            <h3>Pictures page</h3>
+        <p> The pictures.html page turned out nearly as planned. The planned view showed the next and previous pictures in the background of the 
+            picture displayed. This feature were dropped for estethic purposes and the site now shows the current picture with no pictures in a transparent
+            background. 
+        </p>
+
+            <h3>Services page</h3>
+        <p>
+            The Services.html page turned out almost as planned, but with some more pictures with links included in the page. The currency
+            calculator were implemented as planned and the layout turned out as planned. 
+        </p>
+
+            <h3>Homepage</h3>
+        <p>
+            The homepage.html turned out as planned with the info and pictures where they were planned. The styling and fonts were also set as
+            planned and there were no major changes to report.
+        </p>
+
+        <h2>Fulfillment</h2>
+        <p>
+            Ferdinand fulfilled his games-html requirement by developing a structured code that was easy to use with
+            the javascript part of the games page. He also fulfilled his services-html requiremnts by writing the code so that the goals 
+            for how the services-html page should look was met. The infrastructure built on the html page, made the javascript currency 
+            calculator very easy to implement on the page.
+        </p>
+        <p> 
+            Jonathan made the currency calculator currency.js. We did not have a spesific design in mind so we cant say the design was changed,
+            but we did use the same currencies as we specified in P2. This fulfilled the reqiurements
+        </p>
+
+        <p>
+            Johan created the slideshow.js and implemented this in the Pictures.html. The code fulfilled the Javascript requirements.
+        </p>
+
+        <p>
+            Steffen implemented the navigation bar with both Javascript and CSS to ensure user friendly interaction and smooth navigation
+            between the different pages with navbarScrolled.js. The Services.html were also done with help from Ferdinand. This fulfilled the reqiurements
+        </p>
+
+        <p>
+            Daniel implemented the contact.html page with a user validation on the input form represented in the page. The contact page were also
+            made responsive and fulfilled the reqiurements
+        </p>
+
+        <p>
+            Kristian made the homepage.html along with the Javascript for the imagesize.js to fulfill his requirements.
+        </p>
+
+      
+        
+            <h2> Modularity</h2>
+        <p> We handled modularity by having one main css document named Layout.css that every page uses. 
+            We also have the navbar, footer and header that is defined in an external javascript file.
+            Everyone was responsible for the layout.css, but Steffen was responsible for the navbar implementation.
+        </p>
+
+
+    </div>
+    
+    <div class="plan">
+        <br>
+        <p><b>Updated organizational Scheme:</b></p>
+       <ul>
+            <li>homepage.html</li>
+            <li>about.html</li>
+            <li>Games.html</li>
+            <li>pictures.html</li>
+            <li>Services.html</li>
+            <li>contact.html</li>
+            <li>favicon/</li>
+            <li class="listHide"> 
+                <ul>
+                    <li>favicon.ico</li>
+                </ul>
+            </li> 
+            <li>images/</li>
+            <li class="listHide">
+                <ul>
+                    <li>about.jpg</li>
+                    <li>About1.jpg</li>
+                    <li>About2.jpg</li>
+                    <li>About3.jpg</li>
+                    <li>Blackjack.jpg</li>
+                    <li>Caesar_logo.png</li>
+                    <li>caesars_palace_logo.png</li>
+                    <li>caesars_palace_skrift.png</li>
+                    <li>caesars_statue.jpg</li>
+                    <li>caesarsHomapage.jpg</li>
+                    <li>contact.jpg</li>
+                    <li>games.jpg</li>
+                    <li>homepage.jpg</li>
+                    <li>hoverMenu.jpg</li>
+                    <li>image-2.jpg</li>
+                    <li>image-3.jpg</li>
+                    <li>image-4.jpg</li>
+                    <li>image-5.jpg</li>
+                    <li>image-6.jpg</li>
+                    <li>image-7.jpg</li>
+                    <li>image-8.jpg</li>
+                    <li>image.jpg</li>
+                    <li>pictures_casino_blackjack.jpg</li>
+                    <li>pictures_casino_onearmedbandit.jpg</li>
+                    <li>pictures_casino_poker.jpg</li>
+                    <li>pictures_overview_front.jpg</li>
+                    <li>pictures_pool_overview.jpg</li>
+                    <li>pictures.png</li>
+                    <li>pokerpoker.jpg</li>
+                    <li>Roulette.jpg</li>
+                    <li>services.jpg</li>
+                    <li>Structure.jpg</li>
+                </ul>
+            </li>
+            <li>scripts/</li>
+            <li class="listHide">
+                <ul>
+                    <li>dropDownMenu.js</li>
+                    <li>slideShow.js</li>
+                    <li>currency.js</li>
+                    <li>imageSize.js</li>
+                </ul>
+            </li>
+            <li>css/</li>
+            <li class="listHide">
+                <ul>
+                    <li>layout.css</li>
+                    <li>Style.css</li>
+                    <li>StyleP2.css</li>
+                </ul>
+            </li>
+            <li>Documents/</li>
+            <li class="listHide">
+                <ul>
+                    <li>P1.html</li>
+                    <li>P2.html</li>
+                    <li>P3_changes.html</li>
+                    <li>P4.html</li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <h2>
+            Final work division:
+        </h2>
+        <br>
+        <p>
+            The scheme represented in table 1 represents who was responsible for which task. The different files have been delegated
+            in a fair manner.
+        </p>
+
+        <table>
+            <tr>
+                <th>File</th>
+                <th>Description</th>
+                <th>In charge</th>
+            </tr>
+            <tr>
+                <td>homepage.html</td>
+                <td>Homepage</td>
+                <td>Kristian</td>
+            </tr>
+            <tr>
+                <td>about.html</td>
+                <td>A short summary of Caesars Palace and Las Vegas history</td>
+                <td>Jonathan</td>
+            </tr>
+            <tr>
+                <td>games.html</td>
+                <td>Information of some off the games available at Caesars </td>
+                <td>Ferdinand</td>
+            </tr>
+            <tr>
+                <td>services.html</td>
+                <td>Overview of what Caesars has to offer, links to hotel pages, casino, restaurants etc.</td>
+                <td>Ferdinand/Steffen/Daniel</td>
+            </tr>
+            <tr>
+                <td>contact.html</td>
+                <td>Information about how to contact the hotel. Interactive e-mail system </td>
+                <td>Daniel</td>
+            </tr>
+            <tr>
+                <td>pictures.html</td>
+                <td>Visual representations through pictures. includes a carusel that shift picture
+                    every 10 seconds 
+                </td>
+                <td>Johan</td>
+            </tr>
+            <tr>
+                <td>navbarScrolled.js</td>
+                <td>The menu bar interaction</td>
+                <td>Steffen</td>
+            </tr>
+            <tr>
+                <td>slideShow.js</td>
+                <td>An automatic slideshow with navigator arrows</td>
+                <td>Johan</td>
+            </tr>
+            <tr>
+                <td>currencyCalc.js</td>
+                <td>Currency calculator with NOK, USD, EUR, GBP and CNY</td>
+                <td>Jonathan</td>
+            </tr>
+            <tr>
+                <td>imageSize.js</td>
+                <td>When hovered over, the image increases in size and pops up with a description of the game presented below the picture</td>
+                <td>Kristian</td>
+            </tr>
+            <tr>
+                <td>layout.css</td>
+                <td>All layout and styling for the html files, Steffen took responsability</td>
+                <td>Steffen/ALL</td>
+            </tr>
+            <tr>
+                <td>Final Controls and tests</td>
+                <td>Final testing and error checking for all files</td>
+                <td>All</td>
+            </tr>
+        </table>
+        <p><b>Table 1:</b>The table provides a detailed plan for who made different parts of the website</p>
+    </div>
+
+    <footer>
+        XOXO The greatest
+    </footer>
+    
+</body>
+
+</html>
